@@ -1,0 +1,29 @@
+name: Deploy Angular App
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+      - name: Login into docker hub
+        run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{secrets.DOCKER_PASSWORD }}
+      - name: Build docker image
+        run: docker build -t zakeriahirsi/angular-app .
+      - name: Push image to docker hub
+        run: docker push zakeriahirsi/angular-app:latest
+  deploy:
+    needs: build
+    runs-on: self-hosted
+    steps:
+      - name: Pull docker image
+        run: docker pull zakeriahirsi/angular-app:latest
+      - name: Delete old container if exist
+        run: docker rm -f angular-app-container
+      - name: Run docker container angular-app-container
+        run: docker run -d -p 4200:80 --name angular-app-container zakeriahirsi/angular-app
