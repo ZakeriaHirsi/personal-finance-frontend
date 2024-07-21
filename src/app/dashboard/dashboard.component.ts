@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, input, OnInit, Output } from '@angular/core';
+import { CustomerService } from '../services/customer.service'
 
 @Component({
   selector: 'app-dashboard',
@@ -10,6 +11,8 @@ import { Component, EventEmitter, Input, input, OnInit, Output } from '@angular/
 export class DashboardComponent implements OnInit{
   @Input() listChild: Array<string> = ['default'];
   @Output() listChildChange = new EventEmitter<Array<string>>();
+
+  constructor(private customerService: CustomerService) {}
 
   public ngOnInit(): void {
     this.listChild.push('ronaldo', 'messi');
