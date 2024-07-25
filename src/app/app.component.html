@@ -1,12 +1,14 @@
 <main class="main">
-  <div class="content">
-    @if (display) {
+  <div class="min-h-screen h-screen">
+    <app-navbar></app-navbar>
+    <!-- @if (display) {
       {{title}}
       @for (item of list; track $index) {
         {{item}}
       }
-    }
+    } -->
     <app-dashboard [(listChild)]="list"></app-dashboard>
+    <app-footer></app-footer>
   </div>
 </main>
 <router-outlet />
