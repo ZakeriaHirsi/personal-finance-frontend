@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'home',
+    selector: 'app-home',
     standalone: true,
     imports: [],
     templateUrl: './home.component.html',
-    //styleUrl: './app.component.scss'
+    styleUrl: './home.component.scss'
   })
   export class Home {
-    title = 'big boss';
+    
   }
   
