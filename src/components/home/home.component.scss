@@ -110,7 +110,7 @@ $small: 768px;
     color: white;
 
     @media screen and (max-width: $small) {
-      width: calc(100% - 100px);
+      width: 100%;
     }
 
     &--2 {
