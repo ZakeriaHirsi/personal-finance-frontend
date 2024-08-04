@@ -1,11 +1,16 @@
+$small: 768px;
+
 .nav{
     display: flex;
     justify-content: space-between;
-    background-color: white;
+    //background-color: white;
     padding-top:20px;
     padding-bottom:20px;
     padding-left:80px;
     padding-right:80px;
+    @media screen and (max-width: $small) {
+        display: none;
+      }
     .items{
         display: flex;
         align-items: center;
@@ -22,6 +27,7 @@
                 font-family: 'inter';
                 font-size: 16px;
                 color: #7c7a7a;
+                text-decoration: none;
             }
         }
     }
@@ -35,24 +41,26 @@
             margin-right:20px;
             font-family: 'inter';
             color: #7c7a7a;
-            box-shadow: 1px 1px;
+            box-shadow: 0px 8px 8px rgb(194, 194, 194);
+            text-decoration: none;
         }
         
         .login{
             border:1px solid #326E9A;
             padding-left: 25px;
             padding-right: 25px;
-            padding-top: 5px;
-            padding-bottom: 5px;
+            padding-top: 8px;
+            padding-bottom: 8px;
           }
 
           .signup{
+            border:1px solid #326E9A;
             background-color: #326E9A;
             color: white;
             padding-left: 25px;
             padding-right: 25px;
-            padding-top: 5px;
-            padding-bottom: 5px;
+            padding-top: 8px;
+            padding-bottom: 8px;
           }
     }
 }
