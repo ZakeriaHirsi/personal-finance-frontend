@@ -1,7 +1,17 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { Home } from '../components/home/home.component';
 import { Nav } from '../components/nav/nav.component';
+
+import { Router, RouterOutlet, Event, NavigationEnd } from '@angular/router';
+
+import { IStaticMethods } from 'preline/preline';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
+declare global {
+  interface Window {
+    HSStaticMethods: IStaticMethods;
+  }
+}
 
 @Component({
   selector: 'app-root',
