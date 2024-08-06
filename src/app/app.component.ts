@@ -16,7 +16,7 @@ declare global {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Home, Nav, NavbarComponent],
+  imports: [RouterOutlet, Home, Nav, NavbarComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

@@ -13,7 +13,7 @@ $small: 768px;
   margin-bottom: 70px;
   .title {
     color: #868686;
-    font-weight: 50;
+    font-weight: 200;
     font-size: 100px;
     margin-bottom: 20px;
     &__name {
@@ -22,7 +22,7 @@ $small: 768px;
   }
 
   .subtitle {
-    color: #808080;
+    color: #3a3939;
     font-weight: 200;
     font-size: 30px;
   }
@@ -42,6 +42,12 @@ $small: 768px;
   font-weight: 200;
   font-size: 20px;
   margin-bottom: 60px;
+
+  &__tagline{
+    margin-left: 20%;  
+    margin-right: 20%;  
+  }
+
   &__container {
     margin-top: 50px;
   }
