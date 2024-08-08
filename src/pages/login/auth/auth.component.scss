@@ -1,0 +1,39 @@
+$small: 768px;
+
+.main {
+  display: flex;
+  height: 100vh;
+}
+
+.image-container {
+  width: 50%;
+  @media screen and (max-width: $small) {
+    display: none;
+  }
+}
+
+.image {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.login-container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  @media screen and (max-width: $small) {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.login {
+  width: 30rem;
+  @media screen and (max-width: $small) {
+    width: 100%;
+    height: 100%;
+  }
+}

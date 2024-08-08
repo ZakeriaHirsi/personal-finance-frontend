@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { Home } from '../components/home/home.component';
-import { Nav } from '../components/nav/nav.component';
+import { Home } from '../pages/home/home.component';
+import { AuthComponent } from '../pages/login/auth/auth.component';
 
-import { Router, RouterOutlet, Event, NavigationEnd } from '@angular/router';
+import { Router, RouterOutlet,RouterLink, RouterLinkActive } from '@angular/router';
 
 import { IStaticMethods } from 'preline/preline';
-import { FooterComponent } from './footer/footer.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from '../components/footer/footer.component';
+import { NavbarComponent } from '../components/navbar/navbar.component';
 declare global {
   interface Window {
     HSStaticMethods: IStaticMethods;
@@ -16,7 +16,7 @@ declare global {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Home, Nav, NavbarComponent, FooterComponent],
+  imports: [RouterOutlet, Home, AuthComponent, RouterLink, RouterLinkActive ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
