@@ -11,13 +11,13 @@ import { webSocket } from 'rxjs/webSocket';
 import { BehaviorSubject } from 'rxjs';
 
 @Component({
-  selector: 'app-dashboard',
+  selector: 'app-stats',
   standalone: true,
   imports: [],
-  templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.scss',
+  templateUrl: './stats.component.html',
+  styleUrl: './stats.component.scss',
 })
-export class DashboardComponent implements OnInit {
+export class StatsComponent implements OnInit {
   @Input() listChild: Array<string> = ['default'];
   @Output() listChildChange = new EventEmitter<Array<string>>();
 
