@@ -11,7 +11,7 @@ Frontend service for an investment manager platform geared towards muslims which
 ## Technologies
 ### Docker
 
-Docker is used to containerise the application and build an image using docker build. This is useful to be able to run the program on any environment as its running in an image rather than relying on a baremetal environment where specific dependencies need to be installed. Dockerfile contains the golang:1.22.5-alpine image and exposes the backend on port 8080
+Docker is used to containerise the application and build an image using docker build. This is useful to be able to run the program on any environment as its running in an image rather than relying on a baremetal environment where specific dependencies need to be installed. Dockerfile contains the node:20-alpine image and exposes the backend on port 8080
 
 To run the container in the console, use:
 - docker build -t zakeriahirsi/angular-app .
