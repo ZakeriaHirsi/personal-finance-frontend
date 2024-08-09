@@ -37,7 +37,7 @@ Architecture of the project below (subject to change as development continues)
 ![image](https://github.com/user-attachments/assets/34bd1b2e-397e-4bfb-a8eb-135b0c0d6f60)
 
 
-##Angular
+## Angular
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.0.
 
 ## Development server
