@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, Event, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -9,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class SidebarComponent implements OnInit {
+  constructor(private router: Router) {
+  }
+
   ngOnInit() {
-    setTimeout(() => {
-      window.HSStaticMethods.autoInit();
-    }, 100)
+    this.router.events.subscribe((event: Event) => {
+      if (event instanceof NavigationEnd) {
+        setTimeout(() => {
+          window.HSStaticMethods.autoInit();
+        }, 100);
+      }
+    });
   }
 }
