@@ -1,23 +1,32 @@
 <!-- Content -->
 <html class="dark">
-
-<div >
-  <app-sidebar></app-sidebar>
-  <div class="dashboard w-full lg:ps-64">
-    <app-navbar-dark></app-navbar-dark>
-    <div class="dashboard p-1 space-y-4 sm:space-y-6">
-      <div class="overview p-1 space-y-4 sm:space-y-6">
-        <div>
-          <div class="overview__title">Overview</div>
-          <div class="overview__subtitle">
-            View of all your main finances, in one place
+  <div>
+    <app-sidebar></app-sidebar>
+    <div class="dashboard w-full lg:ps-64">
+      <app-navbar></app-navbar>
+      <div class="dashboard p-1 space-y-4 sm:space-y-12">
+        <div class="overview">
+          <div>
+            <div class="overview__title">Overview</div>
+            <div class="overview__subtitle">
+              View of all your main finances, in one place aaa eafea
+            </div>
           </div>
         </div>
+        <div class="section">
+          <app-score class="score"></app-score>
+        </div>
+        <div class="section">
+          <div class="section__title">Table</div>
+          <app-table></app-table>
+        </div>
+        <div class="section">
+          <div class="section__title">Stats</div>
+          <app-stats></app-stats>
+        </div>
       </div>
-      <app-stats></app-stats>
+      <div></div>
     </div>
-    <div></div>
   </div>
-</div>
 </html>
 <!-- End Content -->
