@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { NavbarComponent } from '../../components/navbar/navbar.component';
+import { NavbarDarkComponent } from '../../components/navbar-dark/navbar-dark.component';
 import { SidebarComponent } from '../../components/sidebar/sidebar/sidebar.component';
+import { StatsComponent } from '../../components/stats/stats.component';
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [NavbarComponent, SidebarComponent],
+  imports: [NavbarDarkComponent, SidebarComponent, StatsComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })
