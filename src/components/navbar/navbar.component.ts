@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, RouterOutlet,RouterLink, RouterLinkActive } from '@angular/router';
-
+import { IStaticMethods } from 'preline/preline';
 @Component({
   selector: 'app-navbar',
   standalone: true,
@@ -8,6 +8,10 @@ import { Router, RouterOutlet,RouterLink, RouterLinkActive } from '@angular/rout
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
-export class NavbarComponent {
-
+export class NavbarComponent implements OnInit {
+  ngOnInit() {
+    setTimeout(() => {
+      window.HSStaticMethods.autoInit();
+    }, 100)
+  }
 }

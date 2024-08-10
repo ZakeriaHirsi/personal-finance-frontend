@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,6 +7,11 @@ import { Component } from '@angular/core';
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss'
 })
-export class SidebarComponent {
 
+export class SidebarComponent implements OnInit {
+  ngOnInit() {
+    setTimeout(() => {
+      window.HSStaticMethods.autoInit();
+    }, 100)
+  }
 }
