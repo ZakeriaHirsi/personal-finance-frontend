@@ -1,0 +1,36 @@
+.dashboard{
+    background-color: #171717;
+    min-height: 100vh;
+}
+.overview{
+    height: 150px;
+    // background-color: rgb(199, 198, 255);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    &__title{
+        font-size: 4rem;
+    }
+
+    &__subtitle{
+        font-size: 1rem;
+    }
+}
+
+.section{
+    margin-top: 6rem;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+    &__title{
+        color:white;
+        font-size: 1.5rem;
+    }
+}
+
+.score{
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+}
