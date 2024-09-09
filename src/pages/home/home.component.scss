@@ -1,20 +1,20 @@
 $small: 768px;
-.main{
+.main {
   background: rgb(209, 214, 255);
   background: linear-gradient(
     180deg,
     rgba(209, 214, 255, 1) 0%,
-    rgba(255, 255, 255, 1) 74%,
+    rgba(255, 255, 255, 1) 34%,
     rgba(255, 255, 255, 1) 100%
   );
 }
 
-.home{
-    @media screen and (max-width: $small) {
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-    margin-top: 50px;
+.home {
+  @media screen and (max-width: $small) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  margin-top: 50px;
 }
 
 .header {
@@ -27,6 +27,9 @@ $small: 768px;
     margin-bottom: 20px;
     &__name {
       color: #918ff0;
+    }
+    @media screen and (max-width: $small) {
+      font-size: 70px;
     }
   }
 
@@ -51,9 +54,9 @@ $small: 768px;
   font-size: 20px;
   margin-bottom: 60px;
 
-  &__tagline{
-    margin-left: 20%;  
-    margin-right: 20%;  
+  &__tagline {
+    margin-left: 20%;
+    margin-right: 20%;
   }
 
   &__container {
@@ -110,16 +113,17 @@ $small: 768px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 20rem;
+  margin-right: 20rem;
 
   &__item {
     width: calc(100% / 3 - 100px);
-    height: 180px;
+    // height: 180px;
     margin: 20px;
     text-align: left;
     padding: 20px;
     color: white;
+    border-radius: 10px;
 
     @media screen and (max-width: $small) {
       width: 100%;
@@ -147,16 +151,111 @@ $small: 768px;
   }
 
   &__metric {
-    font-size: 70px;
+    font-size: 100px;
   }
 
   &__content {
-    font-size: 15px;
+    font-size: 20px;
   }
 
   &__firsttitle {
     font-size: 35px;
     font-weight: 200;
     margin-bottom: 10px;
+  }
+}
+
+.join {
+  display: flex;
+  padding-left: 100px;
+  padding-right: 100px;
+  text-align: left;
+  margin-top: 100px;
+  background-color: #f9f8ff;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  &__content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    &__title {
+      font-size: 50px;
+      font-weight: 500;
+    }
+    &__subheading {
+      font-size: 20px;
+      color: #868686;
+      margin-top: 20px;
+    }
+
+    &__buttonContainer {
+      margin-top: auto;
+    }
+
+    &__button {
+      margin-top: 20px;
+      background-color: #2c80ff;
+      color: white;
+      font-weight: bold;
+      font-size: 15px;
+      padding: 10px;
+      border-radius: 10px;
+      width: max-content;
+    }
+  }
+  &__imageContainer {
+    width: 50%;
+    padding: 30px;
+    &__image {
+      border-radius: 30px;
+    }
+  }
+}
+
+.learnImplement{
+  display: flex;
+  margin-top: 50px;
+  .information{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-bottom: 60px;
+
+    &__title{
+      margin-bottom: 30px;
+    }
+    &__section{
+      margin-bottom: 60px;
+      &__icon{
+        width: 80px;
+      }
+
+      &__title{
+        font-size: 20px;
+        font-weight:500;
+      }
+
+      &__description{
+        font-size: 15px;
+        font-weight:500;
+      }
+
+      &__link{
+        font-size: 15px;
+        font-weight:500;
+        text-align: right;
+        color: #326e9a;
+      }
+    }
+  }
+
+  .implement{
+    width: 50%;
   }
 }
